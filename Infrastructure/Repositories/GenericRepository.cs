@@ -1,27 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Linq.Expressions;
 using Core.Entities;
-using Core.Interface;
+using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.Repositories
+namespace Infrastructure.Repositories;
+
+public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 {
-    public class GenericRepository
-    {
-        
-    }
-}
+    private readonly RopaContexxt _context;
 
-
-/*: IGenericRepository<T> where T : BaseEntity
-{
-    private readonly RopaContext _context;
-
-    public GenericRepository(RopaContext context)
+    public GenericRepository(RopaContexxt context)
     {
         _context = context;
     }
@@ -79,4 +68,5 @@ namespace Infrastructure.Repositories
             .Take(pageSize)
             .ToListAsync();
         return (totalRegistros, registros);
-    }*/
+    }
+}

@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
-using Core.Interface;
+using Core.Interfaces;
 
 namespace APIn.Controllers
 {
-    public class PaisControllers : BaseContollers
+    public class PaisControllers : BaseController
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
