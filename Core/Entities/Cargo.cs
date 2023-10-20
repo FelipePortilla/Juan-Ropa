@@ -7,7 +7,8 @@ namespace Core.Entities
 {
     public class Cargo :BaseEntity
     {
-        public int IdCargo { get; set; }
-        public int SueldoBase { get; set; }
+        public string Descripcion { get; set; }
+    public int SuledoBase { get; set; }
+    public ICollection<Empleado> Empleados { get; set; }
     }
 }

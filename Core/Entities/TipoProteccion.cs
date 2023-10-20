@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 
 namespace Core.Entities
 {
-    public class TipoProteccion
+    public class TipoProteccion :BaseEntity
     {
-        
+        public string Descripcion { get; set; }
+
+        public ICollection<Prenda> Prendas { get; set; }
     }
 }

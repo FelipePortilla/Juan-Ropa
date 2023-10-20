@@ -8,7 +8,6 @@ namespace Core.Entities
     public class Pais :BaseEntity
     {
         public string NombrePais { get ; set ;}
-        public int IdPais {get; set;}
         public ICollection<Departamento> Departamentos { get; set; }
     }
 } 

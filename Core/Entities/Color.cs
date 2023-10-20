@@ -7,7 +7,7 @@ namespace Core.Entities
 {
     public class Color :BaseEntity
     {
-        public int IdColor { get; set; }
         public string Descripcion { get; set; }
+        public ICollection<DetalleOrden> DetalleOrdenes { get; set; }
     }
 }

@@ -8,10 +8,11 @@ namespace Core.Entities
     public class Departamento :BaseEntity
 
     {
-        public int IdDepartamento { get; set; }
+        
         public string NombreDepartamento { get; set; }
+        public Pais Paises { get; set; }
 
-        public int IdPaisFK { get; set; }
+        public int IdPaisFk { get; set; }
         public ICollection<Municipio> Municipios { get; set; }
     }
 }

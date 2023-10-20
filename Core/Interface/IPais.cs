@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Entities;
 
-namespace Core.Entities
+
+namespace Core.Interface
 {
-    public class IsumoProveedor
+    public interface IPais : IGenericRepository<Pais>
     {
         
     }
